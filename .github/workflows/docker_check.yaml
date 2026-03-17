@@ -23,4 +23,5 @@ jobs:
 
 
       - name: build
-        run: docker build -t usuario/satc-devops:001 .
+        run: docker build -T usuario/satc-devops:001 .
+        
