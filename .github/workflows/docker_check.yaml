@@ -23,10 +23,10 @@ jobs:
                 password: ${{ secrets.DOCKER_PASSWORD }}
 
             - name: build
-              run: docker build -t miguelfermo/devops-satc:0.0.1 .
+              run: docker build -t usuario/devops-satc:0.0.1 .
 
             - name: Push to Docker Hub
-              run: docker push docker.io/miguelfermo/devops-satc:0.0.1
+              run: docker push docker.io/usuario/devops-satc:0.0.1
 
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@v2
@@ -44,7 +44,7 @@ jobs:
               uses: aquasecurity/trivy-action@master
               with:
                 scan-type: 'image'
-                image-ref: 'docker.io/miguelfermo/devops-satc:0.0.1'
+                image-ref: 'docker.io/usuario/devops-satc:0.0.1'
                 format: json
                 output: trivy-results.json
                 severity: MEDIUM,HIGH,CRITICAL
