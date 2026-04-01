@@ -1,16 +1,64 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# DevOps Landing Page - React
 
-Currently, two official plugins are available:
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-dark.svg)](https://sonarcloud.io/summary/new_code?id=taylorteixeira_devops--satc)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=taylorteixeira_devops--satc&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=taylorteixeira_devops--satc)
 
-## React Compiler
+Um projeto de landing page moderna sobre DevOps, desenvolvida com React.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Início Rápido
 
-## Expanding the ESLint configuration
+### Pré-requisitos
+- Node.js 16+
+- npm ou yarn
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Instalação
+
+```bash
+git clone <repositorio>
+cd devops-satc
+npm install
+```
+
+### Desenvolvimento
+
+```bash
+npm start
+```
+
+Acessa em `http://localhost:3000`
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+├── pages/
+├── styles/
+└── App.jsx
+```
+
+## 🛠️ Tecnologias
+
+- **React** - Interface de usuário
+- **CSS/Tailwind** - Estilização
+- **Vite** (opcional) - Build tool
+
+## 📦 Build
+
+```bash
+npm run build
+```
+
+## 📝 Funcionalidades
+
+- Hero section com call-to-action
+- Seção sobre princípios DevOps
+- Depoimentos e casos de uso
+- Formulário de contato
+- Responsivo para mobile
+
+## 📄 Licença
+
+MIT
