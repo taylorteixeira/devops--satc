@@ -23,7 +23,10 @@ jobs:
                 password: ${{ secrets.DOCKER_PASSWORD }}
 
             - name: build
-              run: docker build -t usuario/devops-satc:0.0.1 .
+              run: docker build -t taylorteixeira/devops-satc:0.0.1 .
+
+            - name: Push to Docker Hub
+              run: docker push docker.io/taylorteixeira/devops-satc:0.0.1
 
             - name: SonarCloud Scan
               uses: SonarSource/sonarcloud-github-action@v2
@@ -41,7 +44,7 @@ jobs:
               uses: aquasecurity/trivy-action@master
               with:
                 scan-type: 'image'
-                image-ref: 'docker.io/usuario/devops-satc:0.0.1'
+                image-ref: 'docker.io/taylorteixeira/devops-satc:0.0.1'
                 format: json
                 output: trivy-results.json
                 severity: MEDIUM,HIGH,CRITICAL
@@ -70,7 +73,7 @@ jobs:
             - name: Falhar se houver mais de 2 vulnerabilidades médias
               run: |
                 COUNT=$(curl -s -u "${SONNAR_TOKEN}:" \
-                  "https://sonarcloud.io/api/issues/search?componentKeys=${SONAR_PROJECT_KEY}&types=VULNERABILITY&severities=MAJOR&resolved=false&ps=1" \
+                  "https://sonarcloud.io/api/issues/search?componentKeys=${SONNAR_PROJECT_KEY}&types=VULNERABILITY&severities=MAJOR&resolved=false&ps=1" \
                   | jq '.total')
 
                 echo "Quantidade de vulnerabilidades médias: $COUNT"
